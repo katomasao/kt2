@@ -5,5 +5,11 @@ package org.somalley
 
 fun main() {
     val likes = readln().toInt()
-    println("Понравилось $likes ${ if(likes % 10 == 1) "человеку" else "людям" }")
+    println("Понравилось $likes ${ peopleFormatted(likes) }")
 }
+
+fun peopleFormatted(count: Int): String =
+    if ((count % 10 == 1) != (count % 100 == 11))
+        "человеку"
+    else
+        "людям"

@@ -4,7 +4,16 @@
 package org.somalley
 
 import kotlin.test.Test
-import kotlin.test.assertNotNull
+import kotlin.test.assertEquals
 
 class AppTest {
+    @Test
+    fun `одному человеку`() =
+        assertEquals("человеку", peopleFormatted(1))
+    @Test
+    fun `двум людям`() =
+        assertEquals("людям", peopleFormatted(2))
+    @Test
+    fun `одиннадцати людям`() =
+        assertEquals("людям", peopleFormatted(11))
 }
